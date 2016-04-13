@@ -22,7 +22,7 @@ public class Logger {
         if (logInterface != null) {
             logInterface.w(tag, message);
         } else {
-            System.out.println(tag + ":" + message);
+            //System.out.println(tag + ":" + message);
         }
     }
 
@@ -30,7 +30,7 @@ public class Logger {
         if (logInterface != null) {
             logInterface.d(tag, message);
         } else {
-            System.out.println(tag + ":" + message);
+            //System.out.println(tag + ":" + message);
         }
     }
 
@@ -38,7 +38,7 @@ public class Logger {
         if (logInterface != null) {
             logInterface.e(tag, t);
         } else {
-            t.printStackTrace();
+            //t.printStackTrace();
         }
     }
 }

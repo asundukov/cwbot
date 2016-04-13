@@ -17,10 +17,10 @@ public class UserContact extends User
         isOnline = tlUserContact.getStatus() instanceof TLUserStatusOnline;
     }
 
-    public UserContact(TLUserSelf tlUserSelf)
+  /*  public UserContact(TLUserSelf tlUserSelf)
     {
         super(tlUserSelf);
-    }
+    }*/
 
     public long getAccessHash()
     {
@@ -31,4 +31,15 @@ public class UserContact extends User
     {
         return isOnline;
     }
+
+    @Override
+    public TLInputUserContact createTLInputUser() {
+        return new TLInputUserContact(getId());
+    }
+
+    @Override
+    public TLInputPeerContact createTLInputPeer() {
+        return new TLInputPeerContact(getId());
+    }
+
 }

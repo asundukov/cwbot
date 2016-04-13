@@ -3,6 +3,7 @@ package org.telegram.api.engine;
 import org.telegram.api.TLAbsUpdates;
 import org.telegram.api.TLApiContext;
 import org.telegram.api.TLConfig;
+import org.telegram.api.TLDcOption;
 import org.telegram.api.auth.TLExportedAuthorization;
 import org.telegram.api.engine.file.Downloader;
 import org.telegram.api.engine.file.Uploader;
@@ -278,6 +279,9 @@ public class TelegramApi {
         }
         final Object waitObj = new Object();
         final Object[] res = new Object[3];
+        if (res[0] instanceof TLDcOption) {
+
+        }
         final boolean[] completed = new boolean[1];
         completed[0] = false;
 

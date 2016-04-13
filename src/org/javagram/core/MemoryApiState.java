@@ -10,9 +10,6 @@ import org.telegram.mtproto.state.KnownSalt;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
- * Created by ex3ndr on 13.01.14.
- */
 public class MemoryApiState implements AbsApiState {
 
     private HashMap<Integer, ConnectionInfo[]> connections = new HashMap<Integer, ConnectionInfo[]>();
@@ -126,4 +123,5 @@ public class MemoryApiState implements AbsApiState {
         isAuth.clear();
         keys.clear();
     }
+
 }

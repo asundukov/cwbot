@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Telegram Experiments.iml" filepath="$PROJECT_DIR$/Telegram Experiments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CWBot.iml" filepath="$PROJECT_DIR$/CWBot.iml" />
     </modules>
   </component>
 </project>

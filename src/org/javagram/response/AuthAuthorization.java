@@ -1,6 +1,7 @@
 package org.javagram.response;
 
 import org.javagram.response.object.User;
+import org.javagram.response.object.UserSelf;
 import org.telegram.api.TLUserSelf;
 import org.telegram.api.auth.TLAuthorization;
 
@@ -11,11 +12,13 @@ public class AuthAuthorization
 {
     private long expires;
     private User selfUser;
+    private TLAuthorization tlAuthorization;
 
     public AuthAuthorization(TLAuthorization authorization)
     {
         this.expires = authorization.getExpires();
-        this.selfUser = new User(authorization.getUser());
+        this.selfUser = User.createUser(authorization.getUser());
+        this.tlAuthorization = authorization;
     }
 
     public long getExpires()
@@ -26,5 +29,9 @@ public class AuthAuthorization
     public User getUser()
     {
         return selfUser;
+    }
+
+    public TLAuthorization getTlAuthorization() {
+        return tlAuthorization;
     }
 }

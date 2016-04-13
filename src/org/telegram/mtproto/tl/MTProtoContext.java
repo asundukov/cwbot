@@ -1,5 +1,7 @@
 package org.telegram.mtproto.tl;
 
+import org.telegram.api.TLAbsUser;
+import org.telegram.api.auth.TLAuthorization;
 import org.telegram.tl.TLContext;
 
 /**
@@ -27,5 +29,6 @@ public class MTProtoContext extends TLContext {
         registerClass(MTGetFutureSalts.CLASS_ID, MTGetFutureSalts.class);
         registerClass(MTFutureSalt.CLASS_ID, MTFutureSalt.class);
         registerClass(MTFutureSalts.CLASS_ID, MTFutureSalts.class);
+        registerClass(TLAuthorization.CLASS_ID, TLAuthorization.class);
     }
 }
